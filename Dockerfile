@@ -1,4 +1,4 @@
-FROM node:14.21.1-alpine3.15 as build-step
+FROM node:14.17.0-alpine as build-step
 RUN mkdir -p /app
 WORKDIR /app
 COPY package.json /app
