@@ -1,0 +1,17 @@
+pipeline {
+    agent {label 'debian'}
+
+    stages {
+        stage('cloning') {
+            steps {
+                git branch: 'main', url: 'https://github.com/jhossmar/angular-app-testing.git'
+            }
+        }
+        stage ('build'){
+            steps{
+                sh "docker-compose ps"
+            }
+        }
+        
+    }
+}
